@@ -1,0 +1,261 @@
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+input {
+  padding: 0px 0px 5px 15px;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  background-color: #f7f7f8;
+  height: 50px;
+}
+
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.spinner {
+  border: 4px solid #eae8de;
+  border-left: 4px solid #ffe25b;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.weather-card,
+.forecast-day {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.forecast-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  /* height: 100%; */
+}
+
+.column1 {
+  grid-column: span 3;
+  background-color: #ffffff;
+  padding: 5%;
+}
+
+.column2 {
+  grid-column: span 9;
+  background-color: #f7f7f8;
+  padding: 40px;
+}
+
+.search {
+  background-color: #f7f7f8;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px 10px 10px;
+}
+.weather_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left_fonts {
+  padding: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.c_font {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+.day_font {
+  color: #050505;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.location_font {
+  color: #050505;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.time_font {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #c2c2c2;
+  font-size: 20px;
+  font-weight: 800;
+}
+.condition_font {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 900;
+}
+.condition {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column2_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.column2_card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 3px 15px;
+}
+.forecast_day {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.forecast_temp {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+}
+.main_heading {
+  color: #c2c2c2;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.todays_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.todays_column2_card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.humidity_value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.humidity_condition {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: 26px;
+}
+.column2_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.temp-toggle-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temp-button {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.temp-button.active {
+  background-color: #131313;
+  color: white;
+  border-color: #131313;
+}
+
+.temp-button:hover {
+  background-color: #f1f1f1;
+  color: #131313;
+}
+
+.profile_image {
+  width: 60px;
+  height: 60px;
+  border-radius: 9px 9px 9px;
+  object-fit: cover;
+}
+
+@media (max-width: 425px) {
+  .column2_container {
+    grid-template-columns: 1fr;
+  }
+  .column2_card {
+    margin: 3px;
+  }
+  .column2 {
+    padding: 8px;
+  }
+  .todays_container {
+    grid-template-columns: 1fr;
+  }
+  .column2_header {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .column1,
+  .column2 {
+    grid-column: span 12;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 600px) {
+  .column2_container {
+    grid-template-columns: 1fr;
+  }
+  .todays_container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .column2_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .todays_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
