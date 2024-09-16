@@ -23,7 +23,7 @@ Follow these steps to set up and run the project on your local machine:
 
 1. Clone the Repository:
   
-   git clone https://github.com/your-username/weather-forecast-app.git
+   git clone https://github.com/Sandeepbangalore737/weather-forecast-app
    cd weather-forecast-app
    
 
